@@ -1,0 +1,48 @@
+{
+  "name": "hangjw/laravel-s",
+  "type": "library",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/hangjw/laravel-s/issues",
+    "source": "https://github.com/hangjw/laravel-s"
+  },
+  "description": "🚀 LaravelS: Speed up Laravel/Lumen by Swoole, 'S' means Swoole, Speed, High performance.",
+  "keywords": [
+    "LaravelS",
+    "speed-laravel",
+    "speed-lumen",
+    "swoole",
+    "laravel-swoole",
+    "lumen-swoole",
+    "http-server",
+    "coroutine",
+    "high-performance"
+  ],
+  "homepage": "https://github.com/hangjw/laravel-s",
+  "authors": [
+    {
+      "name": "ljw",
+      "email": "hangjw@sina.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9"
+  },
+  "suggest": {
+    "ext-swoole": "Event-driven asynchronous & concurrent & coroutine networking engine with high performance for PHP, require >= 1.7.19."
+  },
+  "autoload": {
+    "psr-4": {
+      "Hangjw\\LaravelS\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Hangjw\\LaravelS\\Illuminate\\LaravelSServiceProvider"
+      ]
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}
