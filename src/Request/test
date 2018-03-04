@@ -1,0 +1,1197 @@
+RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 219,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => 'f613b23ab98794da690a712af51f5e28',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 1,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => '4kkzSexhaRhlM3P2y47wXQ==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520123513,
+            'request_time_float' => 1520123513.752038,
+            'server_port' => 5200,
+            'remote_port' => 65315,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520123513,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 218,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => 'f613b23ab98794da690a712af51f5e28',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 1,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => 'USZDKPfPFyiwGsWQ+mww3Q==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520123599,
+            'request_time_float' => 1520123599.378199,
+            'server_port' => 5200,
+            'remote_port' => 65460,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520123599,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 218,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => '918248b1140a24f62e3fc8c641339686',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 2,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 2,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 2,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => '3AmtpmekBTH6VTPAnsY5aw==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520123622,
+            'request_time_float' => 1520123622.225084,
+            'server_port' => 5200,
+            'remote_port' => 65462,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520123622,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 218,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => 'f613b23ab98794da690a712af51f5e28',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 1,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => 'OOT7ixsH9Ow+Hq4RvCt4mw==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520123637,
+            'request_time_float' => 1520123637.458432,
+            'server_port' => 5200,
+            'remote_port' => 65482,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520123637,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 218,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => 'f613b23ab98794da690a712af51f5e28',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 1,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => '9d/koMQJNF/e5eHiAHSQUQ==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520123645,
+            'request_time_float' => 1520123645.90609,
+            'server_port' => 5200,
+            'remote_port' => 65494,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520123645,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 218,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => '918248b1140a24f62e3fc8c641339686',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 2,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 2,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 2,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => '7woN5RyEW6KUmnI5K36LMA==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520123646,
+            'request_time_float' => 1520123646.395354,
+            'server_port' => 5200,
+            'remote_port' => 65496,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520123646,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 218,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => '01f204b1e092c80b61c0bc3a7293f347',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 3,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 3,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 3,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => '0m3b6cfdv9e663NLODyZeA==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520123646,
+            'request_time_float' => 1520123646.698205,
+            'server_port' => 5200,
+            'remote_port' => 65498,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520123646,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 218,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => '4b3ca9d1e754c94bcd3b9be9fbc4568d',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 4,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 4,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 4,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => 'dh0wV8Xx/zibg+KKQKeJdg==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520123646,
+            'request_time_float' => 1520123646.923116,
+            'server_port' => 5200,
+            'remote_port' => 65500,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520123646,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 218,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => 'f613b23ab98794da690a712af51f5e28',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 1,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => 'sXdJppCjVsvgJdBKjvE1SA==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520123756,
+            'request_time_float' => 1520123756.857553,
+            'server_port' => 5200,
+            'remote_port' => 49260,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520123756,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 218,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => 'f613b23ab98794da690a712af51f5e28',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 1,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => 'X9xisZJNr/OJo3XeA5ZUdg==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520123888,
+            'request_time_float' => 1520123888.044663,
+            'server_port' => 5200,
+            'remote_port' => 49465,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520123888,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 218,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => 'f613b23ab98794da690a712af51f5e28',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 1,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => 'x7Q/V4Mh9ZcuFzvLKJNiyg==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520123900,
+            'request_time_float' => 1520123900.763903,
+            'server_port' => 5200,
+            'remote_port' => 49482,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520123900,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 218,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => 'f613b23ab98794da690a712af51f5e28',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 1,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => 'rbKd2rdU7BVr0AiFs/KidQ==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520123960,
+            'request_time_float' => 1520123960.485244,
+            'server_port' => 5200,
+            'remote_port' => 49549,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520123960,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))RuntimeException::__set_state(array(
+   'message' => 'A facade root has not been set.',
+   'string' => '',
+   'code' => 0,
+   'file' => '/var/winwww/ball_game/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php',
+   'line' => 218,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Request/Websocket.php',
+      'line' => 49,
+      'function' => '__callStatic',
+      'class' => 'Illuminate\\Support\\Facades\\Facade',
+      'type' => '::',
+      'args' => 
+      array (
+        0 => 'forever',
+        1 => 
+        array (
+          0 => 'f613b23ab98794da690a712af51f5e28',
+          1 => '/api/socket/ball',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 78,
+      'function' => 'toIlluminateRequest',
+      'class' => 'Hangjw\\LaravelS\\Request\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/winwww/ball_game/vendor/hangjw/laravel-s/src/Server/Websocket.php',
+      'line' => 87,
+      'function' => 'response',
+      'class' => 'Hangjw\\LaravelS\\Server\\Websocket',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 1,
+        1 => 1,
+        2 => 
+        Swoole\Http\Request::__set_state(array(
+           'fd' => 1,
+           'header' => 
+          array (
+            'host' => 'ball.game.com:5200',
+            'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
+            'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'accept-encoding' => 'gzip, deflate',
+            'sec-websocket-version' => '13',
+            'origin' => 'http://ball.game.com',
+            'sec-websocket-extensions' => 'permessage-deflate',
+            'sec-websocket-key' => '9oDj1go/Y1vi2JRv6ng7FQ==',
+            'connection' => 'keep-alive, Upgrade',
+            'pragma' => 'no-cache',
+            'cache-control' => 'no-cache',
+            'upgrade' => 'websocket',
+          ),
+           'server' => 
+          array (
+            'request_method' => 'GET',
+            'request_uri' => '/api/socket/ball',
+            'path_info' => '/api/socket/ball',
+            'request_time' => 1520124065,
+            'request_time_float' => 1520124065.055989,
+            'server_port' => 5200,
+            'remote_port' => 49607,
+            'remote_addr' => '192.168.0.105',
+            'master_time' => 1520124065,
+            'server_protocol' => 'HTTP/1.1',
+            'server_software' => 'swoole-http-server',
+          ),
+           'request' => NULL,
+           'cookie' => NULL,
+           'get' => NULL,
+           'files' => NULL,
+           'post' => NULL,
+           'tmpfiles' => NULL,
+        )),
+      ),
+    ),
+  ),
+   'previous' => NULL,
+))

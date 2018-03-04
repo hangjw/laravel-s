@@ -30,6 +30,7 @@ class Websocket extends Server
         $ip = isset($svrConf['listen_ip']) ? $svrConf['listen_ip'] : '0.0.0.0';
         $port = isset($svrConf['listen_port']) ? $svrConf['listen_port'] : 8841;
         $settings = isset($svrConf['swoole']) ? $svrConf['swoole'] : [];
+        $table = new \swoole_table(1024);
 
         if (isset($settings['ssl_cert_file'], $settings['ssl_key_file'])) {
             $this->swoole = new \swoole_websocket_server($ip, $port, \SWOOLE_PROCESS, \SWOOLE_SOCK_TCP | \SWOOLE_SSL);
@@ -74,7 +75,7 @@ class Websocket extends Server
     {
         try {
             app('webSocket')->setFd($fd);
-            $laravelRequest = (new Request($type, $extra))->toIlluminateRequest();
+            $laravelRequest = (new Request($type, $extra))->toIlluminateRequest($fd);
             $this->laravel->handleDynamic($laravelRequest);
         } catch (\Exception $e) {
             file_put_contents(storage_path('logs/swoole-socket-' . date('Y-m-d') . '.log'), $type . var_export($e, true), FILE_APPEND);

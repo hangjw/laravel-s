@@ -33,13 +33,13 @@ class Http
         }
         $_SERVER = array_change_key_case($_SERVER, CASE_UPPER);
 
+
         $requests = ['C' => $_COOKIE, 'G' => $_GET, 'P' => $_POST];
         $requestOrder = ini_get('request_order') ?: ini_get('variables_order');
         $requestOrder = preg_replace('#[^CGP]#', '', strtoupper($requestOrder)) ?: 'GP';
         foreach (str_split($requestOrder) as $order) {
             $_REQUEST = array_merge($_REQUEST, $requests[$order]);
         }
-
         $request = IlluminateRequest::capture();
         $reflection = new \ReflectionObject($request);
         $content = $reflection->getProperty('content');
