@@ -30,6 +30,11 @@ class Websocket
     public function toIlluminateRequest($fd)
     {
         $key = md5($this->key . $fd);
+        $dir = storage_path() . '/websocket';
+        if (!is_dir($dir)) {
+            mkdir($dir);
+        }
+        $file = storage_path() . '/websocket/' . $key;
         if ($this->socketType == self::TYPE['open']) {
             $_GET = isset($this->request->get) ? $this->request->get : [];
             $_POST = isset($this->request->post) ? $this->request->post : [];
@@ -44,13 +49,6 @@ class Websocket
             }
             $_SERVER = array_change_key_case($_SERVER, CASE_UPPER);
             $pathInfo = $_SERVER['REQUEST_URI'];
-            try {
-
-                Cache::forever($key, $pathInfo);
-            } catch (\Exception $e) {
-                file_put_contents(__DIR__ . '/test', var_export($e, true), FILE_APPEND);
-            }
-
             $_SERVER['REQUEST_URI'] .= '/open';
             $_SERVER['PATH_INFO']   .= '/open';
             $requests = ['C' => $_COOKIE, 'G' => $_GET, 'P' => $_POST];
@@ -60,6 +58,9 @@ class Websocket
                 $_REQUEST = array_merge($_REQUEST, $requests[$order]);
             }
             $request = IlluminateRequest::capture();
+            //file_put_contents(__DIR__ .'/test', var_export(Cache::getFacadeApplication(), true) . "\n", FILE_APPEND);
+//            Cache::forever($key, $pathInfo);
+            file_put_contents($file, $pathInfo);
         } elseif ($this->socketType == self::TYPE['message']) {
             $input = $this->request->data;
             $data = json_decode($input, true);
@@ -71,13 +72,16 @@ class Websocket
             $request = IlluminateRequest::capture();
         } elseif ($this->socketType == self::TYPE['close']) {
             $_GET = $_POST = $_COOKIE = $_SERVER = $headers = $_FILES = $_ENV = $_REQUEST = [];
-            $path = Cache::get($key);
+//            $path = Cache::get($key);
+            $path = file_get_contents($file);
+            unlink($file);
             $_SERVER = [
                 'REQUEST_URI' => $path . '/close',
                 'PATH_INFO' => $path . '/close',
             ];
             $request = IlluminateRequest::capture();
         }
+        //file_put_contents(__DIR__ .'/test', var_export($request, true) . "\n", FILE_APPEND);
         return $request;
     }
 
