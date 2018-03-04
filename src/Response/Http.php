@@ -4,8 +4,9 @@
 namespace Hangjw\LaravelS\Swoole;
 
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
+use Hangjw\LaravelS\Response\Http\ResponseInterface;
 
-abstract class Response implements ResponseInterface
+abstract class Http implements ResponseInterface
 {
     protected $swooleResponse;
 

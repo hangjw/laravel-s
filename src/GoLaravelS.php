@@ -1,7 +1,5 @@
 <?php
 
-use Hangjw\LaravelS\LaravelS;
-
 $input = file_get_contents('php://stdin');
 $cfg = json_decode($input, true);
 
@@ -14,5 +12,9 @@ spl_autoload_register(function ($class) {
     return false;
 });
 
-$s = LaravelS::getInstance($cfg['svrConf'], $cfg['laravelConf']);
+if ($cfg['bootType'] == 'laravelsHttp') {
+    $s = Hangjw\LaravelS\Server\Http::getInstance($cfg['svrConf'], $cfg['laravelConf']);
+} elseif ($cfg['bootType'] == 'laravelsWebsocket') {
+    $s = Hangjw\LaravelS\Server\Websocket::getInstance($cfg['svrConf'], $cfg['laravelConf']);
+}
 $s->run();

@@ -1,12 +1,11 @@
 <?php
 
-namespace Hangjw\LaravelS;
+namespace Hangjw\LaravelS\Server;
 
 use Hangjw\LaravelS\Illuminate\Laravel;
-use Hangjw\LaravelS\Swoole\DynamicResponse;
-use Hangjw\LaravelS\Swoole\Request;
-use Hangjw\LaravelS\Swoole\Server;
-use Hangjw\LaravelS\Swoole\StaticResponse;
+use Hangjw\LaravelS\Response\Http\DynamicResponse;
+use Hangjw\LaravelS\Response\Http\StaticResponse;
+use Hangjw\LaravelS\Request\Http as Request;
 use Illuminate\Http\Request as IlluminateRequest;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
@@ -16,7 +15,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
  * Laravel Request => Laravel handle => Laravel Response
  * Laravel Response => Swoole Response
  */
-class LaravelS extends Server
+class Http extends Server
 {
     protected static $s;
 
@@ -29,30 +28,66 @@ class LaravelS extends Server
 
     protected function __construct(array $svrConf = [], array $laravelConf)
     {
-        parent::__construct($svrConf);
+        $this->conf = $svrConf;
+        $ip = isset($svrConf['listen_ip']) ? $svrConf['listen_ip'] : '0.0.0.0';
+        $port = isset($svrConf['listen_port']) ? $svrConf['listen_port'] : 8841;
+        $settings = isset($svrConf['swoole']) ? $svrConf['swoole'] : [];
+        $settings['enable_static_handler'] = !empty($svrConf['handle_static']);
+
+        if (isset($settings['ssl_cert_file'], $settings['ssl_key_file'])) {
+            $this->swoole = new \swoole_http_server($ip, $port, \SWOOLE_PROCESS, \SWOOLE_SOCK_TCP | \SWOOLE_SSL);
+        } else {
+            $this->swoole = new \swoole_http_server($ip, $port, \SWOOLE_PROCESS);
+        }
+
+        $default = [
+            'reload_async'      => true,
+            'max_wait_time'     => 60,
+            'enable_reuse_port' => true,
+        ];
+
+        $this->swoole->set($settings + $default);
         $this->laravelConf = $laravelConf;
+    }
+
+
+    public function bind()
+    {
+        $this->swoole->on('Start', [$this, 'onStart']);
+        $this->swoole->on('Shutdown', [$this, 'onShutdown']);
+        $this->swoole->on('ManagerStart', [$this, 'onManagerStart']);
+        $this->swoole->on('WorkerStart', [$this, 'onWorkerStart']);
+        $this->swoole->on('WorkerStop', [$this, 'onWorkerStop']);
+        if (version_compare(\swoole_version(), '1.9.17', '>=')) {
+            $this->swoole->on('WorkerExit', [$this, 'onWorkerExit']);
+        }
+        $this->swoole->on('WorkerError', [$this, 'onWorkerError']);
+        $this->swoole->on('Request', [$this, 'onRequest']);
     }
 
     public function onWorkerStart(\swoole_http_server $server, $workerId)
     {
-        parent::onWorkerStart($server, $workerId);
+        $this->setProcessTitle(sprintf('%s laravels: worker process %d', $this->conf['process_prefix'], $workerId));
 
-        // file_put_contents('laravels.log', 'Laravels:onWorkerStart:start already included files ' . json_encode(get_included_files(), JSON_UNESCAPED_SLASHES) . PHP_EOL, FILE_APPEND);
+        if (function_exists('opcache_reset')) {
+            opcache_reset();
+        }
+        if (function_exists('apc_clear_cache')) {
+            apc_clear_cache();
+        }
 
+        clearstatcache();
         // To implement gracefully reload
         // Delay to create Laravel
         // Delay to include Laravel's autoload.php
         $this->laravel = new Laravel($this->laravelConf);
         $this->laravel->prepareLaravel();
-        $this->laravel->bindSwoole($this->swoole);
-
-        // file_put_contents('laravels.log', 'Laravels:onWorkerStart:end already included files ' . json_encode(get_included_files(), JSON_UNESCAPED_SLASHES) . PHP_EOL, FILE_APPEND);
+        $this->laravel->singleton('swoole', $this->swoole);
     }
 
     public function onRequest(\swoole_http_request $request, \swoole_http_response $response)
     {
         try {
-            parent::onRequest($request, $response);
             $laravelRequest = (new Request($request))->toIlluminateRequest();
             $this->laravel->fireEvent('laravels.received_request', [$laravelRequest]);
             $success = $this->handleStaticResource($laravelRequest, $response);
@@ -126,4 +161,43 @@ class LaravelS extends Server
         }
         return self::$s;
     }
+
+    public function onStart(\swoole_http_server $server)
+    {
+        foreach (spl_autoload_functions() as $function) {
+            spl_autoload_unregister($function);
+        }
+
+        $this->setProcessTitle(sprintf('%s laravels: master process', $this->conf['process_prefix']));
+
+        if (version_compare(\swoole_version(), '1.9.5', '<')) {
+            file_put_contents($this->conf['swoole']['pid_file'], $server->master_pid);
+        }
+    }
+
+    public function onShutdown(\swoole_http_server $server)
+    {
+
+    }
+
+    public function onManagerStart(\swoole_http_server $server)
+    {
+        $this->setProcessTitle(sprintf('%s laravels: manager process', $this->conf['process_prefix']));
+    }
+
+    public function onWorkerStop(\swoole_http_server $server, $workerId)
+    {
+
+    }
+
+    public function onWorkerExit(\swoole_http_server $server, $workerId)
+    {
+
+    }
+
+    public function onWorkerError(\swoole_http_server $server, $workerId, $workerPId, $exitCode, $signal)
+    {
+
+    }
+
 }

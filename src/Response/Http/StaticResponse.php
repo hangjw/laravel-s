@@ -1,6 +1,5 @@
 <?php
-
-namespace Hangjw\LaravelS\Swoole;
+namespace Hangjw\LaravelS\Response\Http;
 
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\File\File;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hangjw\LaravelS\Swoole;
+namespace Hangjw\LaravelS\Response\Http;
 
 class DynamicResponse extends Response
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Hangjw\LaravelS\Swoole;
+namespace Hangjw\LaravelS\Request;
 
 use Illuminate\Http\Request as IlluminateRequest;
 
-class Request
+class Http
 {
     protected $swooleRequest;
 
