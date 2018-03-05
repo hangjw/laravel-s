@@ -70,6 +70,7 @@ class Websocket
                 'PATH_INFO' => $data['path_info'],
             ];
             $request = IlluminateRequest::capture();
+            $request->data = $data['data'];
         } elseif ($this->socketType == self::TYPE['close']) {
             $_GET = $_POST = $_COOKIE = $_SERVER = $headers = $_FILES = $_ENV = $_REQUEST = [];
 //            $path = Cache::get($key);
@@ -81,6 +82,7 @@ class Websocket
             ];
             $request = IlluminateRequest::capture();
         }
+        $request->fd = $fd;
         //file_put_contents(__DIR__ .'/test', var_export($request, true) . "\n", FILE_APPEND);
         return $request;
     }
