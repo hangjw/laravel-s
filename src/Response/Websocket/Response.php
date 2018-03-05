@@ -21,6 +21,9 @@ class Response
 
     public function send($content='', $all=true)
     {
+        if (!is_string($content)) {
+            $content = json_encode($content);
+        }
         if ($all === false) {
             $this->ws->push($this->fd,  $content);
         } elseif ($all !== true) {
