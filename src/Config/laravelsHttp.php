@@ -1,10 +1,10 @@
 <?php
 return [
-    'listen_ip'     => env('LARAVELS_LISTEN_IP', '0.0.0.0'),
-    'listen_port'   => env('LARAVELS_LISTEN_PORT', 5201),
-    'enable_gzip'   => env('LARAVELS_ENABLE_GZIP', false),
-    'server'        => env('LARAVELS_SERVER', 'LaravelS'),
-    'handle_static' => env('LARAVELS_HANDLE_STATIC', false),
+    'listen_ip'     => env('LARAVELS_HTTP_LISTEN_IP', '0.0.0.0'),
+    'listen_port'   => env('LARAVELS_HTTP_LISTEN_PORT', 5201),
+    'enable_gzip'   => env('LARAVELS_HTTP_ENABLE_GZIP', false),
+    'server'        => env('LARAVELS_HTTP_SERVER', 'laravels-http'),
+    'handle_static' => env('LARAVELS_HTTP_HANDLE_STATIC', false),
     'swoole'        => [
         'dispatch_mode' => 2,
         'max_request'   => 3000,
