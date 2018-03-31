@@ -58,7 +58,6 @@ class Websocket
                 $_REQUEST = array_merge($_REQUEST, $requests[$order]);
             }
             $request = IlluminateRequest::capture();
-            //file_put_contents(__DIR__ .'/test', var_export(Cache::getFacadeApplication(), true) . "\n", FILE_APPEND);
 //            Cache::forever($key, $pathInfo);
             file_put_contents($file, $pathInfo);
         } elseif ($this->socketType == self::TYPE['message']) {
@@ -83,7 +82,6 @@ class Websocket
             $request = IlluminateRequest::capture();
         }
         $request->fd = $fd;
-        //file_put_contents(__DIR__ .'/test', var_export($request, true) . "\n", FILE_APPEND);
         return $request;
     }
 
